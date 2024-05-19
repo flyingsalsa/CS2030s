@@ -1,0 +1,52 @@
+1.000: C0 arrived [ ]
+1.000: C0 deposit $10 begin (by S0 $100 [ ])
+1.100: C1 arrived [ ]
+1.100: C1 deposit $20 begin (by S1 $100 [ ])
+1.200: C2 arrived [ ]
+1.200: C2 deposit $25 begin (by S2 $100 [ ])
+1.300: C3 arrived [ ]
+1.300: C3 joined counter queue (at S0 $110 [ ])
+1.400: C4 arrived [ ]
+1.400: C4 joined counter queue (at S1 $120 [ ])
+1.500: C5 arrived [ ]
+1.500: C5 joined counter queue (at S2 $125 [ ])
+1.600: C6 arrived [ ]
+1.600: C6 joined counter queue (at S0 $110 [ C3 ])
+1.700: C7 arrived [ ]
+1.700: C7 joined counter queue (at S1 $120 [ C4 ])
+1.800: C8 arrived [ ]
+1.800: C8 joined counter queue (at S2 $125 [ C5 ])
+1.900: C9 arrived [ ]
+1.900: C9 joined counter queue (at S0 $110 [ C3 C6 ])
+2.100: C1 deposit $20 done (by S1 $120 [ C4 C7 ]) success
+2.100: C1 departed
+2.100: C4 withdrawal $15 begin (by S1 $120 [ C7 ])
+2.200: C2 deposit $25 done (by S2 $125 [ C5 C8 ]) success
+2.200: C2 departed
+2.200: C5 withdrawal $20 begin (by S2 $125 [ C8 ])
+3.000: C0 deposit $10 done (by S0 $110 [ C3 C6 C9 ]) success
+3.000: C0 departed
+3.000: C3 withdrawal $30 begin (by S0 $110 [ C6 C9 ])
+3.100: C4 withdrawal $15 done (by S1 $105 [ C7 ]) success
+3.100: C4 departed
+3.100: C7 deposit $30 begin (by S1 $105 [ ])
+4.000: C3 withdrawal $30 done (by S0 $80 [ C6 C9 ]) success
+4.000: C3 departed
+4.000: C6 withdrawal $15 begin (by S0 $80 [ C9 ])
+4.200: C5 withdrawal $20 done (by S2 $105 [ C8 ]) success
+4.200: C5 departed
+4.200: C8 deposit $30 begin (by S2 $105 [ ])
+5.000: C10 arrived [ ]
+5.000: C10 joined counter queue (at S1 $135 [ ])
+5.100: C7 deposit $30 done (by S1 $135 [ C10 ]) success
+5.100: C7 departed
+5.100: C10 withdrawal $40 begin (by S1 $135 [ ])
+6.000: C6 withdrawal $15 done (by S0 $65 [ C9 ]) success
+6.000: C6 departed
+6.000: C9 withdrawal $50 begin (by S0 $65 [ ])
+6.100: C10 withdrawal $40 done (by S1 $95 [ ]) success
+6.100: C10 departed
+6.200: C8 deposit $30 done (by S2 $135 [ ]) success
+6.200: C8 departed
+8.000: C9 withdrawal $50 done (by S0 $15 [ ]) success
+8.000: C9 departed
